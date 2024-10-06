@@ -1,9 +1,6 @@
 eztfem.addons.elements package
 ==============================
 
-Submodules
-----------
-
 eztfem.addons.elements.poisson\_elements module
 -----------------------------------------------
 
@@ -24,14 +21,6 @@ eztfem.addons.elements.streamfunction\_elements module
 ------------------------------------------------------
 
 .. automodule:: eztfem.addons.elements.streamfunction_elements
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: eztfem.addons.elements
    :members:
    :undoc-members:
    :show-inheritance:

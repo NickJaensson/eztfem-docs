@@ -10,11 +10,3 @@ Subpackages
    eztfem.addons.elements
    eztfem.addons.meshes
    eztfem.addons.plotlib
-
-Module contents
----------------
-
-.. automodule:: eztfem.addons
-   :members:
-   :undoc-members:
-   :show-inheritance:

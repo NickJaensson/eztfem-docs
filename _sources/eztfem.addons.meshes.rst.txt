@@ -1,9 +1,6 @@
 eztfem.addons.meshes package
 ============================
 
-Submodules
-----------
-
 eztfem.addons.meshes.compound\_meshgen module
 ---------------------------------------------
 
@@ -16,14 +13,6 @@ eztfem.addons.meshes.pyvista\_meshgen module
 --------------------------------------------
 
 .. automodule:: eztfem.addons.meshes.pyvista_meshgen
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: eztfem.addons.meshes
    :members:
    :undoc-members:
    :show-inheritance:

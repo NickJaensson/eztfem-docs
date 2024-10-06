@@ -5,15 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 6
 
    eztfem.addons
    eztfem.core
-
-Module contents
----------------
-
-.. automodule:: eztfem
-   :members:
-   :undoc-members:
-   :show-inheritance:
