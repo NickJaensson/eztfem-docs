@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eztfem.core package &mdash; eztfem.py Oct 2024 documentation</title>
+  <title>core subpackage &mdash; eztfem.py Oct 2024 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="eztfem.addons.plotlib package" href="eztfem.addons.plotlib.html" /> 
+    <link rel="prev" title="plotlib subpackage" href="eztfem.addons.plotlib.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,11 +46,99 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">eztfem</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="eztfem.html">eztfem package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="eztfem.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.html">eztfem.addons package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">eztfem.core package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">eztfem package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.elements.html">elements subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.meshes.html">meshes subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.plotlib.html">plotlib subpackage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">core subpackage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.add_boundary_elements">add_boundary_elements module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.add_boundary_elements.add_boundary_elements"><code class="docutils literal notranslate"><span class="pre">add_boundary_elements()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.apply_essential">apply_essential module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.apply_essential.apply_essential"><code class="docutils literal notranslate"><span class="pre">apply_essential()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.basis_function">basis_function module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.basis_function.barycentric"><code class="docutils literal notranslate"><span class="pre">barycentric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.basis_function.basis_function"><code class="docutils literal notranslate"><span class="pre">basis_function()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.build_system">build_system module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.build_system.build_system"><code class="docutils literal notranslate"><span class="pre">build_system()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.class_mesh">class_mesh module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_mesh.Geometry"><code class="docutils literal notranslate"><span class="pre">Geometry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_mesh.Mesh"><code class="docutils literal notranslate"><span class="pre">Mesh</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.class_problem">class_problem module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_problem.Problem"><code class="docutils literal notranslate"><span class="pre">Problem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.class_user">class_user module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_user.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.class_vector">class_vector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_vector.Vector"><code class="docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.define_essential">define_essential module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.define_essential.define_essential"><code class="docutils literal notranslate"><span class="pre">define_essential()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.deriv_vector">deriv_vector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.deriv_vector.deriv_vector"><code class="docutils literal notranslate"><span class="pre">deriv_vector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.distribute_elements">distribute_elements module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.distribute_elements.distribute_elements"><code class="docutils literal notranslate"><span class="pre">distribute_elements()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.fill_system_vector">fill_system_vector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.fill_system_vector.fill_system_vector"><code class="docutils literal notranslate"><span class="pre">fill_system_vector()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.gauss_legendre">gauss_legendre module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.gauss_legendre.gauss_legendre"><code class="docutils literal notranslate"><span class="pre">gauss_legendre()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.integrate_boundary_elements">integrate_boundary_elements module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.integrate_boundary_elements.integrate_boundary_elements"><code class="docutils literal notranslate"><span class="pre">integrate_boundary_elements()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.isoparametric_deformation">isoparametric_deformation module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.isoparametric_deformation.isoparametric_deformation"><code class="docutils literal notranslate"><span class="pre">isoparametric_deformation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.isoparametric_deformation_curve">isoparametric_deformation_curve module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.isoparametric_deformation_curve.isoparametric_deformation_curve"><code class="docutils literal notranslate"><span class="pre">isoparametric_deformation_curve()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.line_1d">line_1d module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.line_1d.line1d"><code class="docutils literal notranslate"><span class="pre">line1d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.mesh_merge">mesh_merge module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.mesh_merge.mesh_merge"><code class="docutils literal notranslate"><span class="pre">mesh_merge()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.pos_array">pos_array module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.pos_array.pos_array"><code class="docutils literal notranslate"><span class="pre">pos_array()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.pos_array_vec">pos_array_vec module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.pos_array_vec.pos_array_vec"><code class="docutils literal notranslate"><span class="pre">pos_array_vec()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.quadrilateral2d">quadrilateral2d module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.quadrilateral2d.quadrilateral2d"><code class="docutils literal notranslate"><span class="pre">quadrilateral2d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.refcoor_nodal_points">refcoor_nodal_points module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.refcoor_nodal_points.refcoor_nodal_points"><code class="docutils literal notranslate"><span class="pre">refcoor_nodal_points()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -73,9 +161,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">eztfem</a></li>
-          <li class="breadcrumb-item"><a href="eztfem.html">eztfem package</a></li>
-      <li class="breadcrumb-item active">eztfem.core package</li>
+          <li class="breadcrumb-item"><a href="modules.html">eztfem package</a></li>
+          <li class="breadcrumb-item"><a href="eztfem.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">core subpackage</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/eztfem.core.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,10 +173,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="eztfem-core-package">
-<h1>eztfem.core package<a class="headerlink" href="#eztfem-core-package" title="Link to this heading"></a></h1>
+  <section id="core-subpackage">
+<h1>core subpackage<a class="headerlink" href="#core-subpackage" title="Link to this heading"></a></h1>
 <section id="module-eztfem.core.add_boundary_elements">
-<span id="eztfem-core-add-boundary-elements-module"></span><h2>eztfem.core.add_boundary_elements module<a class="headerlink" href="#module-eztfem.core.add_boundary_elements" title="Link to this heading"></a></h2>
+<span id="add-boundary-elements-module"></span><h2>add_boundary_elements module<a class="headerlink" href="#module-eztfem.core.add_boundary_elements" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.add_boundary_elements.add_boundary_elements">
 <span class="sig-name descname"><span class="pre">add_boundary_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.add_boundary_elements.add_boundary_elements" title="Link to this definition"></a></dt>
@@ -138,7 +226,7 @@ Default=False</p>
 
 </section>
 <section id="module-eztfem.core.apply_essential">
-<span id="eztfem-core-apply-essential-module"></span><h2>eztfem.core.apply_essential module<a class="headerlink" href="#module-eztfem.core.apply_essential" title="Link to this heading"></a></h2>
+<span id="apply-essential-module"></span><h2>apply_essential module<a class="headerlink" href="#module-eztfem.core.apply_essential" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.apply_essential.apply_essential">
 <span class="sig-name descname"><span class="pre">apply_essential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iess</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.apply_essential.apply_essential" title="Link to this definition"></a></dt>
@@ -175,7 +263,7 @@ Default=False</p>
 
 </section>
 <section id="module-eztfem.core.basis_function">
-<span id="eztfem-core-basis-function-module"></span><h2>eztfem.core.basis_function module<a class="headerlink" href="#module-eztfem.core.basis_function" title="Link to this heading"></a></h2>
+<span id="basis-function-module"></span><h2>basis_function module<a class="headerlink" href="#module-eztfem.core.basis_function" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.basis_function.barycentric">
 <span class="sig-name descname"><span class="pre">barycentric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.basis_function.barycentric" title="Link to this definition"></a></dt>
@@ -259,7 +347,7 @@ space, j the unknown, and k the direction in space.</p>
 
 </section>
 <section id="module-eztfem.core.build_system">
-<span id="eztfem-core-build-system-module"></span><h2>eztfem.core.build_system module<a class="headerlink" href="#module-eztfem.core.build_system" title="Link to this heading"></a></h2>
+<span id="build-system-module"></span><h2>build_system module<a class="headerlink" href="#module-eztfem.core.build_system" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.build_system.build_system">
 <span class="sig-name descname"><span class="pre">build_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.build_system.build_system" title="Link to this definition"></a></dt>
@@ -316,7 +404,7 @@ Default: False.</p>
 
 </section>
 <section id="module-eztfem.core.class_mesh">
-<span id="eztfem-core-class-mesh-module"></span><h2>eztfem.core.class_mesh module<a class="headerlink" href="#module-eztfem.core.class_mesh" title="Link to this heading"></a></h2>
+<span id="class-mesh-module"></span><h2>class_mesh module<a class="headerlink" href="#module-eztfem.core.class_mesh" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="eztfem.core.class_mesh.Geometry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Geometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elshape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elnumnod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nnodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.class_mesh.Geometry" title="Link to this definition"></a></dt>
@@ -455,7 +543,7 @@ initialization function to ensure they are re-created at every call.</p>
 
 </section>
 <section id="module-eztfem.core.class_problem">
-<span id="eztfem-core-class-problem-module"></span><h2>eztfem.core.class_problem module<a class="headerlink" href="#module-eztfem.core.class_problem" title="Link to this heading"></a></h2>
+<span id="class-problem-module"></span><h2>class_problem module<a class="headerlink" href="#module-eztfem.core.class_problem" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="eztfem.core.class_problem.Problem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Problem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementdof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nphysq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.class_problem.Problem" title="Link to this definition"></a></dt>
@@ -514,7 +602,7 @@ in elementdof.</p>
 
 </section>
 <section id="module-eztfem.core.class_user">
-<span id="eztfem-core-class-user-module"></span><h2>eztfem.core.class_user module<a class="headerlink" href="#module-eztfem.core.class_user" title="Link to this heading"></a></h2>
+<span id="class-user-module"></span><h2>class_user module<a class="headerlink" href="#module-eztfem.core.class_user" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="eztfem.core.class_user.User">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">User</span></span><a class="headerlink" href="#eztfem.core.class_user.User" title="Link to this definition"></a></dt>
@@ -542,7 +630,7 @@ arrays (np.array([])).</p>
 
 </section>
 <section id="module-eztfem.core.class_vector">
-<span id="eztfem-core-class-vector-module"></span><h2>eztfem.core.class_vector module<a class="headerlink" href="#module-eztfem.core.class_vector" title="Link to this heading"></a></h2>
+<span id="class-vector-module"></span><h2>class_vector module<a class="headerlink" href="#module-eztfem.core.class_vector" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="eztfem.core.class_vector.Vector">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.class_vector.Vector" title="Link to this definition"></a></dt>
@@ -570,7 +658,7 @@ vecor data (u) is initialized as an empty numpy array (np.array([])).</p>
 
 </section>
 <section id="module-eztfem.core.define_essential">
-<span id="eztfem-core-define-essential-module"></span><h2>eztfem.core.define_essential module<a class="headerlink" href="#module-eztfem.core.define_essential" title="Link to this heading"></a></h2>
+<span id="define-essential-module"></span><h2>define_essential module<a class="headerlink" href="#module-eztfem.core.define_essential" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.define_essential.define_essential">
 <span class="sig-name descname"><span class="pre">define_essential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.define_essential.define_essential" title="Link to this definition"></a></dt>
@@ -614,7 +702,7 @@ boundary conditions will be added. Default is 0.</p>
 
 </section>
 <section id="module-eztfem.core.deriv_vector">
-<span id="eztfem-core-deriv-vector-module"></span><h2>eztfem.core.deriv_vector module<a class="headerlink" href="#module-eztfem.core.deriv_vector" title="Link to this heading"></a></h2>
+<span id="deriv-vector-module"></span><h2>deriv_vector module<a class="headerlink" href="#module-eztfem.core.deriv_vector" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.deriv_vector.deriv_vector">
 <span class="sig-name descname"><span class="pre">deriv_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.deriv_vector.deriv_vector" title="Link to this definition"></a></dt>
@@ -658,7 +746,7 @@ Default: False.</p>
 
 </section>
 <section id="module-eztfem.core.distribute_elements">
-<span id="eztfem-core-distribute-elements-module"></span><h2>eztfem.core.distribute_elements module<a class="headerlink" href="#module-eztfem.core.distribute_elements" title="Link to this heading"></a></h2>
+<span id="distribute-elements-module"></span><h2>distribute_elements module<a class="headerlink" href="#module-eztfem.core.distribute_elements" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.distribute_elements.distribute_elements">
 <span class="sig-name descname"><span class="pre">distribute_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nelem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.distribute_elements.distribute_elements" title="Link to this definition"></a></dt>
@@ -704,7 +792,7 @@ Default: False.</p>
 
 </section>
 <section id="module-eztfem.core.fill_system_vector">
-<span id="eztfem-core-fill-system-vector-module"></span><h2>eztfem.core.fill_system_vector module<a class="headerlink" href="#module-eztfem.core.fill_system_vector" title="Link to this heading"></a></h2>
+<span id="fill-system-vector-module"></span><h2>fill_system_vector module<a class="headerlink" href="#module-eztfem.core.fill_system_vector" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.fill_system_vector.fill_system_vector">
 <span class="sig-name descname"><span class="pre">fill_system_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.fill_system_vector.fill_system_vector" title="Link to this definition"></a></dt>
@@ -756,7 +844,7 @@ function call (if it is present, f is modified in place).</p>
 
 </section>
 <section id="module-eztfem.core.gauss_legendre">
-<span id="eztfem-core-gauss-legendre-module"></span><h2>eztfem.core.gauss_legendre module<a class="headerlink" href="#module-eztfem.core.gauss_legendre" title="Link to this heading"></a></h2>
+<span id="gauss-legendre-module"></span><h2>gauss_legendre module<a class="headerlink" href="#module-eztfem.core.gauss_legendre" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.gauss_legendre.gauss_legendre">
 <span class="sig-name descname"><span class="pre">gauss_legendre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.gauss_legendre.gauss_legendre" title="Link to this definition"></a></dt>
@@ -796,7 +884,7 @@ exact). This only applies to shape=’triangle’.</p>
 
 </section>
 <section id="module-eztfem.core.integrate_boundary_elements">
-<span id="eztfem-core-integrate-boundary-elements-module"></span><h2>eztfem.core.integrate_boundary_elements module<a class="headerlink" href="#module-eztfem.core.integrate_boundary_elements" title="Link to this heading"></a></h2>
+<span id="integrate-boundary-elements-module"></span><h2>integrate_boundary_elements module<a class="headerlink" href="#module-eztfem.core.integrate_boundary_elements" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.integrate_boundary_elements.integrate_boundary_elements">
 <span class="sig-name descname"><span class="pre">integrate_boundary_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.integrate_boundary_elements.integrate_boundary_elements" title="Link to this definition"></a></dt>
@@ -849,7 +937,7 @@ NOTE: The outside loop is always given by the physical quantities.</p>
 
 </section>
 <section id="module-eztfem.core.isoparametric_deformation">
-<span id="eztfem-core-isoparametric-deformation-module"></span><h2>eztfem.core.isoparametric_deformation module<a class="headerlink" href="#module-eztfem.core.isoparametric_deformation" title="Link to this heading"></a></h2>
+<span id="isoparametric-deformation-module"></span><h2>isoparametric_deformation module<a class="headerlink" href="#module-eztfem.core.isoparametric_deformation" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.isoparametric_deformation.isoparametric_deformation">
 <span class="sig-name descname"><span class="pre">isoparametric_deformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dphi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.isoparametric_deformation.isoparametric_deformation" title="Link to this definition"></a></dt>
@@ -894,7 +982,7 @@ point i.</p>
 
 </section>
 <section id="module-eztfem.core.isoparametric_deformation_curve">
-<span id="eztfem-core-isoparametric-deformation-curve-module"></span><h2>eztfem.core.isoparametric_deformation_curve module<a class="headerlink" href="#module-eztfem.core.isoparametric_deformation_curve" title="Link to this heading"></a></h2>
+<span id="isoparametric-deformation-curve-module"></span><h2>isoparametric_deformation_curve module<a class="headerlink" href="#module-eztfem.core.isoparametric_deformation_curve" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.isoparametric_deformation_curve.isoparametric_deformation_curve">
 <span class="sig-name descname"><span class="pre">isoparametric_deformation_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dphi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.isoparametric_deformation_curve.isoparametric_deformation_curve" title="Link to this definition"></a></dt>
@@ -937,7 +1025,7 @@ Shape: (number of points in space, direction in space).</p>
 
 </section>
 <section id="module-eztfem.core.line_1d">
-<span id="eztfem-core-line-1d-module"></span><h2>eztfem.core.line_1d module<a class="headerlink" href="#module-eztfem.core.line_1d" title="Link to this heading"></a></h2>
+<span id="line-1d-module"></span><h2>line_1d module<a class="headerlink" href="#module-eztfem.core.line_1d" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.line_1d.line1d">
 <span class="sig-name descname"><span class="pre">line1d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ne</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eltype</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.line_1d.line1d" title="Link to this definition"></a></dt>
@@ -992,7 +1080,7 @@ Note that the components curves are not present for <cite>LINE1D</cite>.</p>
 
 </section>
 <section id="module-eztfem.core.mesh_merge">
-<span id="eztfem-core-mesh-merge-module"></span><h2>eztfem.core.mesh_merge module<a class="headerlink" href="#module-eztfem.core.mesh_merge" title="Link to this heading"></a></h2>
+<span id="mesh-merge-module"></span><h2>mesh_merge module<a class="headerlink" href="#module-eztfem.core.mesh_merge" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.mesh_merge.mesh_merge">
 <span class="sig-name descname"><span class="pre">mesh_merge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.mesh_merge.mesh_merge" title="Link to this definition"></a></dt>
@@ -1053,7 +1141,7 @@ NOTE: merged curves are removed automatically already.</p>
 
 </section>
 <section id="module-eztfem.core.pos_array">
-<span id="eztfem-core-pos-array-module"></span><h2>eztfem.core.pos_array module<a class="headerlink" href="#module-eztfem.core.pos_array" title="Link to this heading"></a></h2>
+<span id="pos-array-module"></span><h2>pos_array module<a class="headerlink" href="#module-eztfem.core.pos_array" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.pos_array.pos_array">
 <span class="sig-name descname"><span class="pre">pos_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.pos_array.pos_array" title="Link to this definition"></a></dt>
@@ -1098,7 +1186,7 @@ quantity.</p>
 
 </section>
 <section id="module-eztfem.core.pos_array_vec">
-<span id="eztfem-core-pos-array-vec-module"></span><h2>eztfem.core.pos_array_vec module<a class="headerlink" href="#module-eztfem.core.pos_array_vec" title="Link to this heading"></a></h2>
+<span id="pos-array-vec-module"></span><h2>pos_array_vec module<a class="headerlink" href="#module-eztfem.core.pos_array_vec" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.pos_array_vec.pos_array_vec">
 <span class="sig-name descname"><span class="pre">pos_array_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.pos_array_vec.pos_array_vec" title="Link to this definition"></a></dt>
@@ -1143,7 +1231,7 @@ each vector.</p>
 
 </section>
 <section id="module-eztfem.core.quadrilateral2d">
-<span id="eztfem-core-quadrilateral2d-module"></span><h2>eztfem.core.quadrilateral2d module<a class="headerlink" href="#module-eztfem.core.quadrilateral2d" title="Link to this heading"></a></h2>
+<span id="quadrilateral2d-module"></span><h2>quadrilateral2d module<a class="headerlink" href="#module-eztfem.core.quadrilateral2d" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.quadrilateral2d.quadrilateral2d">
 <span class="sig-name descname"><span class="pre">quadrilateral2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_el</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eltype</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.quadrilateral2d.quadrilateral2d" title="Link to this definition"></a></dt>
@@ -1218,7 +1306,7 @@ the four curves the factor is given.</p>
 
 </section>
 <section id="module-eztfem.core.refcoor_nodal_points">
-<span id="eztfem-core-refcoor-nodal-points-module"></span><h2>eztfem.core.refcoor_nodal_points module<a class="headerlink" href="#module-eztfem.core.refcoor_nodal_points" title="Link to this heading"></a></h2>
+<span id="refcoor-nodal-points-module"></span><h2>refcoor_nodal_points module<a class="headerlink" href="#module-eztfem.core.refcoor_nodal_points" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.core.refcoor_nodal_points.refcoor_nodal_points">
 <span class="sig-name descname"><span class="pre">refcoor_nodal_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.refcoor_nodal_points.refcoor_nodal_points" title="Link to this definition"></a></dt>
@@ -1246,7 +1334,7 @@ the four curves the factor is given.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="eztfem.addons.plotlib.html" class="btn btn-neutral float-left" title="eztfem.addons.plotlib package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="eztfem.addons.plotlib.html" class="btn btn-neutral float-left" title="plotlib subpackage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
