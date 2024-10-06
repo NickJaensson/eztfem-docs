@@ -6,7 +6,8 @@
 eztfem.py documentation
 =======================
 
-Install the EZTFEM package by running the following command in the `eztem.py` root directory:
+Install the eztfem package by running the following command in the eztfem.py
+root directory:
 
 .. code-block:: bash
 
