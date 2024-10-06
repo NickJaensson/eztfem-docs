@@ -25,10 +25,10 @@ basis\_function module
    :undoc-members:
    :show-inheritance:
 
-build\_system module
+assembly module
 --------------------------------
 
-.. automodule:: eztfem.core.build_system
+.. automodule:: eztfem.core.assembly
    :members:
    :undoc-members:
    :show-inheritance:
