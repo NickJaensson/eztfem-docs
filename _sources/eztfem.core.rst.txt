@@ -1,6 +1,9 @@
 eztfem.core package
 ===================
 
+Submodules
+----------
+
 eztfem.core.add\_boundary\_elements module
 ------------------------------------------
 
@@ -21,7 +24,7 @@ eztfem.core.basis\_function module
 ----------------------------------
 
 .. automodule:: eztfem.core.basis_function
-   :members: barycentric, basis_function
+   :members:
    :undoc-members:
    :show-inheritance:
 
@@ -101,7 +104,7 @@ eztfem.core.gauss\_legendre module
 ----------------------------------
 
 .. automodule:: eztfem.core.gauss_legendre
-   :members: gauss_legendre
+   :members:
    :undoc-members:
    :show-inheritance:
 
@@ -133,7 +136,7 @@ eztfem.core.line\_1d module
 ---------------------------
 
 .. automodule:: eztfem.core.line_1d
-   :members: line1d
+   :members:
    :undoc-members:
    :show-inheritance:
 
@@ -165,7 +168,7 @@ eztfem.core.quadrilateral2d module
 ----------------------------------
 
 .. automodule:: eztfem.core.quadrilateral2d
-   :members: quadrilateral2d
+   :members:
    :undoc-members:
    :show-inheritance:
 
@@ -173,6 +176,14 @@ eztfem.core.refcoor\_nodal\_points module
 -----------------------------------------
 
 .. automodule:: eztfem.core.refcoor_nodal_points
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: eztfem.core
    :members:
    :undoc-members:
    :show-inheritance:

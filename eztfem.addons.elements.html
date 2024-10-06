@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eztfem.addons.elements package &mdash; eztfem.py Oct 2024 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5e95d5fc"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="eztfem.addons.meshes package" href="eztfem.addons.meshes.html" />
+    <link rel="prev" title="eztfem.addons package" href="eztfem.addons.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            eztfem.py
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">eztfem</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="eztfem.html">eztfem package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="eztfem.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="eztfem.addons.html">eztfem.addons package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html">eztfem.core package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.html#module-eztfem">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">eztfem.py</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">eztfem</a></li>
+          <li class="breadcrumb-item"><a href="eztfem.html">eztfem package</a></li>
+          <li class="breadcrumb-item"><a href="eztfem.addons.html">eztfem.addons package</a></li>
+      <li class="breadcrumb-item active">eztfem.addons.elements package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/eztfem.addons.elements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="eztfem-addons-elements-package">
+<h1>eztfem.addons.elements package<a class="headerlink" href="#eztfem-addons-elements-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-eztfem.addons.elements.poisson_elements">
+<span id="eztfem-addons-elements-poisson-elements-module"></span><h2>eztfem.addons.elements.poisson_elements module<a class="headerlink" href="#module-eztfem.addons.elements.poisson_elements" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.poisson_elements.poisson_deriv">
+<span class="sig-name descname"><span class="pre">poisson_deriv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.poisson_elements.poisson_deriv" title="Link to this definition"></a></dt>
+<dd><p>Compute the gradient of the velocity field for a given element.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>Gradient of the velocity field at all nodes, shape (n_dim * n_nodes,).</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h3>
+<p>This function is intended for use with <cite>deriv_vector</cite> or <cite>plot_sol</cite>.</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.poisson_elements.poisson_elem">
+<span class="sig-name descname"><span class="pre">poisson_elem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.poisson_elements.poisson_elem" title="Link to this definition"></a></dt>
+<dd><p>Element routine for the Poisson equation: - alpha nabla^2 u = f</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemmat<span class="classifier">ndarray</span></dt><dd><p>Element matrix, shape (n_df, n_df).</p>
+</dd>
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>Element vector, shape (n_df,).</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>This function computes the element matrix and vector for the Poisson
+equation using isoparametric finite element methods.</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.poisson_elements.poisson_natboun_curve">
+<span class="sig-name descname"><span class="pre">poisson_natboun_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.poisson_elements.poisson_natboun_curve" title="Link to this definition"></a></dt>
+<dd><p>Boundary element for a natural boundary on a curve for the
+Poisson/diffusion equation: alpha * dudn = h</p>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Returns<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>The element vector.</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Notes<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<p>This function computes the element vector for a natural boundary on a curve
+for the Poisson/diffusion equation using isoparametric finite element
+methods.</p>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-eztfem.addons.elements.stokes_elements">
+<span id="eztfem-addons-elements-stokes-elements-module"></span><h2>eztfem.addons.elements.stokes_elements module<a class="headerlink" href="#module-eztfem.addons.elements.stokes_elements" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.stokes_elements.stokes_deriv">
+<span class="sig-name descname"><span class="pre">stokes_deriv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.stokes_elements.stokes_deriv" title="Link to this definition"></a></dt>
+<dd><p>Compute the derivative of the velocity field for post-processing.</p>
+<section id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Returns<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>The computed derivative at all nodes.</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h3>Notes<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<p>This function is intended for use with <cite>deriv_vector</cite> or <cite>plot_sol</cite>.</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.stokes_elements.stokes_elem">
+<span class="sig-name descname"><span class="pre">stokes_elem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.stokes_elements.stokes_elem" title="Link to this definition"></a></dt>
+<dd><p>Element routine for the Poisson equation:
+- nabla.( mu (nabla u+nabla u^T) ) + nabla p = f and nabla.u = 0</p>
+<section id="id10">
+<h3>Parameters<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h3>Returns<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemmat<span class="classifier">ndarray</span></dt><dd><p>Element matrix, shape (n_df, n_df).</p>
+</dd>
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>Element vector, shape (n_df,).</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h3>Notes<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<p>This function computes the element matrix and vector for the Stokes
+equation using isoparametric finite element methods.</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.stokes_elements.stokes_flowrate_curve">
+<span class="sig-name descname"><span class="pre">stokes_flowrate_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.stokes_elements.stokes_flowrate_curve" title="Link to this definition"></a></dt>
+<dd><p>Compute the flowrate through a curve for boundary elements.</p>
+<section id="id13">
+<h3>Parameters<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h3>Returns<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>flowrate<span class="classifier">float</span></dt><dd><p>The computed element flowrate.</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h3>Notes<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<p>This function must be called in <cite>integrate_boundary_curve</cite> using 
+<cite>posvectors=0</cite> (default).</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.stokes_elements.stokes_natboun_curve">
+<span class="sig-name descname"><span class="pre">stokes_natboun_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.stokes_elements.stokes_natboun_curve" title="Link to this definition"></a></dt>
+<dd><p>Compute the boundary element for a natural boundary on a curve for the
+Stokes equation.</p>
+<section id="id16">
+<h3>Parameters<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h3>Returns<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemmat<span class="classifier">ndarray</span></dt><dd><p>The element matrix.</p>
+</dd>
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>The element vector.</p>
+</dd>
+</dl>
+</section>
+<section id="id18">
+<h3>Notes<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<p>This function must be called in <cite>add_boundary_elements</cite> using
+<cite>posvectors=0</cite> (default).</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.stokes_elements.stokes_pressure">
+<span class="sig-name descname"><span class="pre">stokes_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.stokes_elements.stokes_pressure" title="Link to this definition"></a></dt>
+<dd><p>Compute the pressure for post-processing in Stokes flow.</p>
+<section id="id19">
+<h3>Parameters<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h3>Returns<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>The pressure at all nodes.</p>
+</dd>
+</dl>
+</section>
+<section id="id21">
+<h3>Notes<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<p>This function is intended for use with <cite>deriv_vector</cite> or <cite>plot_sol</cite>.</p>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-eztfem.addons.elements.streamfunction_elements">
+<span id="eztfem-addons-elements-streamfunction-elements-module"></span><h2>eztfem.addons.elements.streamfunction_elements module<a class="headerlink" href="#module-eztfem.addons.elements.streamfunction_elements" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.streamfunction_elements.streamfunction_elem">
+<span class="sig-name descname"><span class="pre">streamfunction_elem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posvec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.streamfunction_elements.streamfunction_elem" title="Link to this definition"></a></dt>
+<dd><p>Compute the element matrix and vector for the streamfunction equation:
+- nabla^2 psi = omega, where omega is derived from the velocity vector.</p>
+<section id="id22">
+<h3>Parameters<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+<dt>posvec<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each vector.</p>
+</dd>
+</dl>
+</section>
+<section id="id23">
+<h3>Returns<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemmat<span class="classifier">ndarray</span></dt><dd><p>The element matrix.</p>
+</dd>
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>The element vector.</p>
+</dd>
+</dl>
+</section>
+<section id="id24">
+<h3>Notes<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<p>This function must be called in <cite>build_system</cite> using <cite>posvectors=1</cite>.</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.addons.elements.streamfunction_elements.streamfunction_natboun_curve">
+<span class="sig-name descname"><span class="pre">streamfunction_natboun_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">posvec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.elements.streamfunction_elements.streamfunction_natboun_curve" title="Link to this definition"></a></dt>
+<dd><p>Compute the boundary element for a natural boundary on a curve for the
+streamfunction equation (Poisson equation): dpsidn = -v * nx + u * ny
+since dpsidx = -v, dpsidy = u.</p>
+<section id="id25">
+<h3>Parameters<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elem<span class="classifier">int</span></dt><dd><p>Element number.</p>
+</dd>
+<dt>coor<span class="classifier">ndarray</span></dt><dd><p>Coordinates of the nodes of the element, shape (n_points, n_dim).</p>
+</dd>
+<dt>user<span class="classifier">User</span></dt><dd><p>User object containing shape function, Gauss points, parameters</p>
+</dd>
+<dt>pos<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each physical quantity.</p>
+</dd>
+<dt>posvec<span class="classifier">list of ndarray</span></dt><dd><p>Positions of the degrees of freedom of each vector.</p>
+</dd>
+</dl>
+</section>
+<section id="id26">
+<h3>Returns<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>elemmat<span class="classifier">ndarray</span></dt><dd><p>The element matrix.</p>
+</dd>
+<dt>elemvec<span class="classifier">ndarray</span></dt><dd><p>The element vector.</p>
+</dd>
+</dl>
+</section>
+<section id="id27">
+<h3>Notes<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<p>This function must be called in <cite>build_system</cite> using <cite>posvectors=1</cite>.</p>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-eztfem.addons.elements">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-eztfem.addons.elements" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="eztfem.addons.html" class="btn btn-neutral float-left" title="eztfem.addons package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="eztfem.addons.meshes.html" class="btn btn-neutral float-right" title="eztfem.addons.meshes package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Nick Jaensson.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
