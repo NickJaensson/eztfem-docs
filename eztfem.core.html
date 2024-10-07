@@ -79,16 +79,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_user.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.class_vector">class_vector module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.class_vector.Vector"><code class="docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.vector">vector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.vector.Vector"><code class="docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.vector.deriv_vector"><code class="docutils literal notranslate"><span class="pre">deriv_vector()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.define_essential">define_essential module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.define_essential.define_essential"><code class="docutils literal notranslate"><span class="pre">define_essential()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.deriv_vector">deriv_vector module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.deriv_vector.deriv_vector"><code class="docutils literal notranslate"><span class="pre">deriv_vector()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.fill_system_vector">fill_system_vector module</a><ul>
@@ -117,10 +114,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.pos_array">pos_array module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.pos_array.pos_array"><code class="docutils literal notranslate"><span class="pre">pos_array()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.pos_array_vec">pos_array_vec module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.pos_array_vec.pos_array_vec"><code class="docutils literal notranslate"><span class="pre">pos_array_vec()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.pos_array.pos_array_vec"><code class="docutils literal notranslate"><span class="pre">pos_array_vec()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.meshgen">meshgen module</a><ul>
@@ -618,11 +612,11 @@ arrays (np.array([])).</p>
 </dd></dl>
 
 </section>
-<section id="module-eztfem.core.class_vector">
-<span id="class-vector-module"></span><h2>class_vector module<a class="headerlink" href="#module-eztfem.core.class_vector" title="Link to this heading"></a></h2>
+<section id="module-eztfem.core.vector">
+<span id="vector-module"></span><h2>vector module<a class="headerlink" href="#module-eztfem.core.vector" title="Link to this heading"></a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="eztfem.core.class_vector.Vector">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.class_vector.Vector" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="eztfem.core.vector.Vector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.vector.Vector" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class used to represent a Vector.</p>
 <section id="id16">
@@ -645,6 +639,47 @@ vecor data (u) is initialized as an empty numpy array (np.array([])).</p>
 </section>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.core.vector.deriv_vector">
+<span class="sig-name descname"><span class="pre">deriv_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.vector.deriv_vector" title="Link to this definition"></a></dt>
+<dd><p>Derive a vector of special structure.</p>
+<section id="id18">
+<h3>Parameters<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>mesh<span class="classifier">Mesh</span></dt><dd><p>Mesh structure.</p>
+</dd>
+<dt>problem<span class="classifier">Problem</span></dt><dd><p>Problem structure.</p>
+</dd>
+<dt>element<span class="classifier">callable</span></dt><dd><p>Function handle to the element function routine.</p>
+</dd>
+<dt>user<span class="classifier">Any</span></dt><dd><p>User object to pass parameters and data to the element routine.</p>
+</dd>
+</dl>
+</section>
+<section id="id19">
+<h3>Keyword arguments<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>vec<span class="classifier">int, optional</span></dt><dd><p>The vector number. Default is problem[‘nphysq’].</p>
+</dd>
+<dt>order<span class="classifier">str, optional</span></dt><dd><p>The sequence order of the degrees of freedom on element level.
+‘ND’ : the most inner loop is over the degrees of freedom.
+‘DN’ : the most inner loop is over the nodal points.
+Default is ‘DN’.</p>
+</dd>
+<dt>posvectors<span class="classifier">bool, optional</span></dt><dd><p>Supply the position of vectors to the element routine.
+Default: False.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h3>Returns<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>v<span class="classifier">Vector</span></dt><dd><p>Vector object containing the derived data.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
 </section>
 <section id="module-eztfem.core.define_essential">
 <span id="define-essential-module"></span><h2>define_essential module<a class="headerlink" href="#module-eztfem.core.define_essential" title="Link to this heading"></a></h2>
@@ -652,8 +687,8 @@ vecor data (u) is initialized as an empty numpy array (np.array([])).</p>
 <dt class="sig sig-object py" id="eztfem.core.define_essential.define_essential">
 <span class="sig-name descname"><span class="pre">define_essential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numbers</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.define_essential.define_essential" title="Link to this definition"></a></dt>
 <dd><p>Get the indices of the essential degrees of freedom.</p>
-<section id="id18">
-<h3>Parameters<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
+<section id="id21">
+<h3>Parameters<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>mesh<span class="classifier">Mesh</span></dt><dd><p>Mesh object.</p>
 </dd>
@@ -668,8 +703,8 @@ vecor data (u) is initialized as an empty numpy array (np.array([])).</p>
 </dd>
 </dl>
 </section>
-<section id="id19">
-<h3>Keyword arguments<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
+<section id="id22">
+<h3>Keyword arguments<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>physq<span class="classifier">int, optional</span></dt><dd><p>Physical quantity number. Default is 0.</p>
 </dd>
@@ -680,54 +715,10 @@ boundary conditions will be added. Default is 0.</p>
 </dd>
 </dl>
 </section>
-<section id="id20">
-<h3>Returns<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
-<dl class="simple">
-<dt>iess<span class="classifier">numpy.ndarray</span></dt><dd><p>Index of defined essential degrees.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-</section>
-<section id="module-eztfem.core.deriv_vector">
-<span id="deriv-vector-module"></span><h2>deriv_vector module<a class="headerlink" href="#module-eztfem.core.deriv_vector" title="Link to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="eztfem.core.deriv_vector.deriv_vector">
-<span class="sig-name descname"><span class="pre">deriv_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.deriv_vector.deriv_vector" title="Link to this definition"></a></dt>
-<dd><p>Derive a vector of special structure.</p>
-<section id="id21">
-<h3>Parameters<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
-<dl class="simple">
-<dt>mesh<span class="classifier">Mesh</span></dt><dd><p>Mesh structure.</p>
-</dd>
-<dt>problem<span class="classifier">Problem</span></dt><dd><p>Problem structure.</p>
-</dd>
-<dt>element<span class="classifier">callable</span></dt><dd><p>Function handle to the element function routine.</p>
-</dd>
-<dt>user<span class="classifier">Any</span></dt><dd><p>User object to pass parameters and data to the element routine.</p>
-</dd>
-</dl>
-</section>
-<section id="id22">
-<h3>Keyword arguments<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
-<dl class="simple">
-<dt>vec<span class="classifier">int, optional</span></dt><dd><p>The vector number. Default is problem[‘nphysq’].</p>
-</dd>
-<dt>order<span class="classifier">str, optional</span></dt><dd><p>The sequence order of the degrees of freedom on element level.
-‘ND’ : the most inner loop is over the degrees of freedom.
-‘DN’ : the most inner loop is over the nodal points.
-Default is ‘DN’.</p>
-</dd>
-<dt>posvectors<span class="classifier">bool, optional</span></dt><dd><p>Supply the position of vectors to the element routine.
-Default: False.</p>
-</dd>
-</dl>
-</section>
 <section id="id23">
 <h3>Returns<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
 <dl class="simple">
-<dt>v<span class="classifier">Vector</span></dt><dd><p>Vector object containing the derived data.</p>
+<dt>iess<span class="classifier">numpy.ndarray</span></dt><dd><p>Index of defined essential degrees.</p>
 </dd>
 </dl>
 </section>
@@ -1072,12 +1063,9 @@ quantity.</p>
 </section>
 </dd></dl>
 
-</section>
-<section id="module-eztfem.core.pos_array_vec">
-<span id="pos-array-vec-module"></span><h2>pos_array_vec module<a class="headerlink" href="#module-eztfem.core.pos_array_vec" title="Link to this heading"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="eztfem.core.pos_array_vec.pos_array_vec">
-<span class="sig-name descname"><span class="pre">pos_array_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.pos_array_vec.pos_array_vec" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="eztfem.core.pos_array.pos_array_vec">
+<span class="sig-name descname"><span class="pre">pos_array_vec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.pos_array.pos_array_vec" title="Link to this definition"></a></dt>
 <dd><p>Get the index of the degrees of freedom of one or more vectors of special
 structure in the given nodes.</p>
 <section id="id49">
