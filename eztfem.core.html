@@ -52,10 +52,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">eztfem package</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="eztfem.addons.html">addons subpackage</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">core subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.apply_essential">apply_essential module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.apply_essential.apply_essential"><code class="docutils literal notranslate"><span class="pre">apply_essential()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.shapefunc">shapefunc module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.shapefunc.barycentric"><code class="docutils literal notranslate"><span class="pre">barycentric()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.shapefunc.basis_function"><code class="docutils literal notranslate"><span class="pre">basis_function()</span></code></a></li>
@@ -64,6 +60,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-eztfem.core.system_matrix">system_matrix module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.system_matrix.add_boundary_elements"><code class="docutils literal notranslate"><span class="pre">add_boundary_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eztfem.core.system_matrix.apply_essential"><code class="docutils literal notranslate"><span class="pre">apply_essential()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#eztfem.core.system_matrix.build_system"><code class="docutils literal notranslate"><span class="pre">build_system()</span></code></a></li>
 </ul>
 </li>
@@ -158,43 +155,6 @@
              
   <section id="core-subpackage">
 <h1>core subpackage<a class="headerlink" href="#core-subpackage" title="Link to this heading"></a></h1>
-<section id="module-eztfem.core.apply_essential">
-<span id="apply-essential-module"></span><h2>apply_essential module<a class="headerlink" href="#module-eztfem.core.apply_essential" title="Link to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="eztfem.core.apply_essential.apply_essential">
-<span class="sig-name descname"><span class="pre">apply_essential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iess</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.apply_essential.apply_essential" title="Link to this definition"></a></dt>
-<dd><p>Add effect of essential boundary conditions to right-hand side.</p>
-<p>NOTE: This function modifies the input arguments <cite>A</cite> and <cite>f</cite> in place.</p>
-<section id="parameters">
-<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
-<dl class="simple">
-<dt>Ain<span class="classifier">scipy.sparse.lil_matrix</span></dt><dd><p>System matrix.</p>
-</dd>
-<dt>fin<span class="classifier">numpy.ndarray</span></dt><dd><p>Right-hand side vector.</p>
-</dd>
-<dt>uess<span class="classifier">numpy.ndarray</span></dt><dd><p>Vector containing the values for essential boundary conditions.</p>
-</dd>
-<dt>iess<span class="classifier">numpy.ndarray</span></dt><dd><p>Index of defined essential degrees.</p>
-</dd>
-</dl>
-</section>
-<section id="keyword-argument">
-<h3>Keyword argument<a class="headerlink" href="#keyword-argument" title="Link to this heading"></a></h3>
-<dl class="simple">
-<dt>return_Aup<span class="classifier">bool, optional</span></dt><dd><p>Return the Aup matrix if True (Default = False)</p>
-</dd>
-</dl>
-</section>
-<section id="returns">
-<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
-<dl class="simple">
-<dt>Aup<span class="classifier">scipy.sparse.lil_matrix</span></dt><dd><p>Matrix partition of unknown rows and prescribed columns.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-</section>
 <section id="module-eztfem.core.shapefunc">
 <span id="shapefunc-module"></span><h2>shapefunc module<a class="headerlink" href="#module-eztfem.core.shapefunc" title="Link to this heading"></a></h2>
 <dl class="py function">
@@ -202,16 +162,16 @@
 <span class="sig-name descname"><span class="pre">barycentric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.shapefunc.barycentric" title="Link to this definition"></a></dt>
 <dd><p>Compute the barycentric coordinates and their derivatives for a triangular
 element at reference coordinates.</p>
-<section id="id1">
-<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>xr<span class="classifier">array_like</span></dt><dd><p>Reference coordinates where lambda and dlambda must be computed.
 xr[i, j] with i the point in space and j the direction in space.</p>
 </dd>
 </dl>
 </section>
-<section id="id2">
-<h3>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>lambda<span class="classifier">numpy.ndarray</span></dt><dd><p>Barycentric coordinates lambda[i, j], with i the point in space and j
 the number.</p>
@@ -246,8 +206,8 @@ The three barycentric coordinates are:
 <dt class="sig sig-object py" id="eztfem.core.shapefunc.basis_function">
 <span class="sig-name descname"><span class="pre">basis_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intpol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.shapefunc.basis_function" title="Link to this definition"></a></dt>
 <dd><p>Compute the basis function and its derivative at reference coordinates.</p>
-<section id="id3">
-<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>shape<span class="classifier">{‘line’, ‘quad’, ‘triangle’}</span></dt><dd><p>Shape of the element:
 - ‘line’: line element on the reference interval [-1, 1]
@@ -266,8 +226,8 @@ xr[i, j] with i the point in space and j the direction in space.</p>
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h3>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>phi<span class="classifier">numpy.ndarray</span></dt><dd><p>Basis function phi[i, j], with i the point in space and j the unknown.</p>
 </dd>
@@ -282,15 +242,15 @@ space, j the unknown, and k the direction in space.</p>
 <dt class="sig sig-object py" id="eztfem.core.shapefunc.refcoor_nodal_points">
 <span class="sig-name descname"><span class="pre">refcoor_nodal_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.shapefunc.refcoor_nodal_points" title="Link to this definition"></a></dt>
 <dd><p>Find the reference coordinates of the nodal points.</p>
-<section id="id5">
-<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<section id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>mesh<span class="classifier">Mesh</span></dt><dd><p>Mesh object.</p>
 </dd>
 </dl>
 </section>
-<section id="id6">
-<h3>Returns<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<section id="id4">
+<h3>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>x<span class="classifier">numpy.ndarray</span></dt><dd><p>Reference coordinates of the nodal points.</p>
 </dd>
@@ -308,8 +268,8 @@ space, j the unknown, and k the direction in space.</p>
 matrix.</p>
 <p>NOTE: This function modifies the input arguments <cite>f</cite> and optionally <cite>A</cite> in
 place.</p>
-<section id="id7">
-<h3>Parameters<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>mesh<span class="classifier">Mesh</span></dt><dd><p>Mesh object.</p>
 </dd>
@@ -343,6 +303,40 @@ Default: All physical quantities.</p>
 </dd>
 <dt>posvectors<span class="classifier">bool</span></dt><dd><p>Supply the position of vectors to the element routine.
 Default=False</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eztfem.core.system_matrix.apply_essential">
+<span class="sig-name descname"><span class="pre">apply_essential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iess</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.core.system_matrix.apply_essential" title="Link to this definition"></a></dt>
+<dd><p>Add effect of essential boundary conditions to right-hand side.</p>
+<p>NOTE: This function modifies the input arguments <cite>A</cite> and <cite>f</cite> in place.</p>
+<section id="id6">
+<h3>Parameters<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>Ain<span class="classifier">scipy.sparse.lil_matrix</span></dt><dd><p>System matrix.</p>
+</dd>
+<dt>fin<span class="classifier">numpy.ndarray</span></dt><dd><p>Right-hand side vector.</p>
+</dd>
+<dt>uess<span class="classifier">numpy.ndarray</span></dt><dd><p>Vector containing the values for essential boundary conditions.</p>
+</dd>
+<dt>iess<span class="classifier">numpy.ndarray</span></dt><dd><p>Index of defined essential degrees.</p>
+</dd>
+</dl>
+</section>
+<section id="keyword-argument">
+<h3>Keyword argument<a class="headerlink" href="#keyword-argument" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>return_Aup<span class="classifier">bool, optional</span></dt><dd><p>Return the Aup matrix if True (Default = False)</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h3>Returns<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>Aup<span class="classifier">scipy.sparse.lil_matrix</span></dt><dd><p>Matrix partition of unknown rows and prescribed columns.</p>
 </dd>
 </dl>
 </section>
