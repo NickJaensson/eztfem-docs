@@ -5,7 +5,7 @@ shapefunc module
 ----------------------------------
 
 .. automodule:: eztfem.core.shapefunc
-   :members: barycentric, basis_function, refcoor_nodal_points
+   :members: barycentric, basis_function, refcoor_nodal_points, isoparametric_deformation, isoparametric_deformation_curve
    :undoc-members:
    :show-inheritance:
 
@@ -17,26 +17,18 @@ system\_matrix module
    :undoc-members:
    :show-inheritance:
 
-class\_mesh module
-------------------------------
-
-.. automodule:: eztfem.core.class_mesh
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-class\_problem module
+problem module
 ---------------------------------
 
-.. automodule:: eztfem.core.class_problem
+.. automodule:: eztfem.core.problem
    :members:
    :undoc-members:
    :show-inheritance:
 
-class\_user module
+user module
 ------------------------------
 
-.. automodule:: eztfem.core.class_user
+.. automodule:: eztfem.core.user
    :members:
    :undoc-members:
    :show-inheritance:
@@ -49,58 +41,26 @@ vector module
    :undoc-members:
    :show-inheritance:
 
-define\_essential module
-------------------------------------
-
-.. automodule:: eztfem.core.define_essential
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-fill\_system\_vector module
----------------------------------------
-
-.. automodule:: eztfem.core.fill_system_vector
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-gauss\_legendre module
+gauss module
 ----------------------------------
 
-.. automodule:: eztfem.core.gauss_legendre
+.. automodule:: eztfem.core.gauss
    :members: gauss_legendre
    :undoc-members:
    :show-inheritance:
 
-integrate\_boundary\_elements module
+postprocessing module
 ------------------------------------------------
 
-.. automodule:: eztfem.core.integrate_boundary_elements
+.. automodule:: eztfem.core.postprocessing
    :members:
    :undoc-members:
    :show-inheritance:
 
-isoparametric\_deformation module
----------------------------------------------
-
-.. automodule:: eztfem.core.isoparametric_deformation
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-isoparametric\_deformation\_curve module
-----------------------------------------------------
-
-.. automodule:: eztfem.core.isoparametric_deformation_curve
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-mesh\_merge module
+meshgen_extra module
 ------------------------------
 
-.. automodule:: eztfem.core.mesh_merge
+.. automodule:: eztfem.core.meshgen_extra
    :members:
    :undoc-members:
    :show-inheritance:
@@ -117,6 +77,6 @@ meshgen module
 ----------------------------------
 
 .. automodule:: eztfem.core.meshgen
-   :members: quadrilateral2d, line1d, distribute_elements
+   :members: Mesh, quadrilateral2d, line1d, distribute_elements
    :undoc-members:
    :show-inheritance:
