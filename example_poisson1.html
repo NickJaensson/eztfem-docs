@@ -50,11 +50,11 @@
 <li class="toctree-l1"><a class="reference internal" href="eztfem_install.html">eztfem installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_examples.html">running examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Poisson problem with Dirichlet BCs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#importing">Importing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importing-packages">Importing packages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mesh-generation">Mesh generation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#problem-definition">Problem definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fill-user-object">Fill User object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#assembly">Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fill-user-object">Fill user object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-assembly">System assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boundary-conditions">Boundary conditions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#solve-linear-system">Solve linear system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#compare-solution">Compare solution</a></li>
@@ -95,8 +95,8 @@
              
   <section id="poisson-problem-with-dirichlet-bcs">
 <h1>Poisson problem with Dirichlet BCs<a class="headerlink" href="#poisson-problem-with-dirichlet-bcs" title="Link to this heading"></a></h1>
-<section id="importing">
-<h2>Importing<a class="headerlink" href="#importing" title="Link to this heading"></a></h2>
+<section id="importing-packages">
+<h2>Importing packages<a class="headerlink" href="#importing-packages" title="Link to this heading"></a></h2>
 <p>Import the relevant packages to run this script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Poisson problem on a unit square with Dirichlet boundary conditions</span>
 
@@ -142,7 +142,7 @@ only used for postprocessing (see below).</p>
 </div>
 </section>
 <section id="fill-user-object">
-<h2>Fill User object<a class="headerlink" href="#fill-user-object" title="Link to this heading"></a></h2>
+<h2>Fill user object<a class="headerlink" href="#fill-user-object" title="Link to this heading"></a></h2>
 <p>The user object is used to pass various data and coefficients to the element
 routines. Here, the Gauss-Legendre integration points (<code class="docutils literal notranslate"><span class="pre">xr</span></code>) and weights
 (<code class="docutils literal notranslate"><span class="pre">wg</span></code>) are computed and added, together with the basis functions
@@ -175,8 +175,8 @@ user.func<span class="w"> </span><span class="o">=</span><span class="w"> </span
 </pre></div>
 </div>
 </section>
-<section id="assembly">
-<h2>Assembly<a class="headerlink" href="#assembly" title="Link to this heading"></a></h2>
+<section id="system-assembly">
+<h2>System assembly<a class="headerlink" href="#system-assembly" title="Link to this heading"></a></h2>
 <p>Assemble the system matrix <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> and vector
 <span class="math notranslate nohighlight">\(\boldsymbol{f}\)</span> using the element function <code class="docutils literal notranslate"><span class="pre">poisson_elem</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># assemble the system matrix and vector</span>
