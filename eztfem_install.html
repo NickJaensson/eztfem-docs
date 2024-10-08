@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="example poisson1" href="example_poisson1.html" />
+    <link rel="next" title="running examples" href="running_examples.html" />
     <link rel="prev" title="eztfem.py documentation" href="index.html" /> 
 </head>
 
@@ -47,8 +47,13 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">eztfem installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_poisson1.html">example poisson1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_poisson4.html">example poisson4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_examples.html">running examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_poisson1.html">Poisson problem with Dirichlet BCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_poisson4.html">Poisson problem with Neumann BCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_stokes1.html">Stokes problem with Dirichlet BCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_stokes2.html">Stokes problem with Neumann BCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_streamfunction.html">computing the streamfunction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">eztfem package</a></li>
 </ul>
 
@@ -103,6 +108,31 @@ FUNCTION_NAME<span class="o">()</span>
 </pre></div>
 </div>
 <p>Note that in the second option, all functions need to be imported explicitly.</p>
+<p>In the file browser you see the following folders in the eztfem tree:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examples</span></code></p></li>
+</ul>
+<p>The folder <code class="docutils literal notranslate"><span class="pre">src</span></code> contains the folders <code class="docutils literal notranslate"><span class="pre">core</span></code> and <code class="docutils literal notranslate"><span class="pre">addons</span></code>.
+The folder <code class="docutils literal notranslate"><span class="pre">core</span></code> contains core functions of eztfem, whereas the folder
+<code class="docutils literal notranslate"><span class="pre">addons</span></code> contains the add-ons, with a separate folder for each add-on.
+The following add-ons are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">poisson</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stokes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meshes</span></code></p></li>
+</ul>
+<p>which contain plot functions, element routines for the Poisson and Stokes
+equations and functions for more complicated meshes, respectively.
+The folder <code class="docutils literal notranslate"><span class="pre">examples</span></code> contain the examples, divided into separate
+folders. Each folder might contain several examples, but all of the same
+kind, e.g. a problem involving the Stokes equation. The following example
+folders are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">poisson</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stokes</span></code></p></li>
+</ul>
 </section>
 
 
@@ -110,7 +140,7 @@ FUNCTION_NAME<span class="o">()</span>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="eztfem.py documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="example_poisson1.html" class="btn btn-neutral float-right" title="example poisson1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="running_examples.html" class="btn btn-neutral float-right" title="running examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

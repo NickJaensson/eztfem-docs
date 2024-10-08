@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eztfem.py documentation &mdash; eztfem.py Oct 2024 documentation</title>
+  <title>computing the streamfunction &mdash; eztfem.py Oct 2024 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -18,11 +18,11 @@
         <script src="_static/documentation_options.js?v=5e95d5fc"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="eztfem installation" href="eztfem_install.html" /> 
+    <link rel="next" title="plotting" href="plotting.html" />
+    <link rel="prev" title="Stokes problem with Neumann BCs" href="example_stokes2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             eztfem.py
           </a>
 <div role="search">
@@ -45,14 +45,14 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="eztfem_install.html">eztfem installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running_examples.html">running examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_poisson1.html">Poisson problem with Dirichlet BCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_poisson4.html">Poisson problem with Neumann BCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_stokes1.html">Stokes problem with Dirichlet BCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_stokes2.html">Stokes problem with Neumann BCs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_streamfunction.html">computing the streamfunction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">computing the streamfunction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">eztfem package</a></li>
 </ul>
@@ -63,17 +63,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">eztfem.py</a>
+          <a href="index.html">eztfem.py</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">eztfem.py documentation</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">computing the streamfunction</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/example_streamfunction.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -81,35 +81,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="eztfem-py-documentation">
-<h1>eztfem.py documentation<a class="headerlink" href="#eztfem-py-documentation" title="Link to this heading"></a></h1>
-<p>Welcome to the eztfem.py documentation page. Eztfem is a simple toolkit for
-the finite element method (FEM) intended for use  in teaching finite elements
-for fluid flow. It can be seen as a significantly reduced version of TFEM
-(developed and maintained by M.A. Hulsen at the Eindhoven University of
-Technology). Since eztfem.py consists of Python functions only, it is
-easily accessible for students.</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="eztfem_install.html">eztfem installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running_examples.html">running examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_poisson1.html">Poisson problem with Dirichlet BCs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_poisson4.html">Poisson problem with Neumann BCs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_stokes1.html">Stokes problem with Dirichlet BCs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_stokes2.html">Stokes problem with Neumann BCs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example_streamfunction.html">computing the streamfunction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">eztfem package</a></li>
-</ul>
-</div>
+  <section id="computing-the-streamfunction">
+<h1>computing the streamfunction<a class="headerlink" href="#computing-the-streamfunction" title="Link to this heading"></a></h1>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="eztfem_install.html" class="btn btn-neutral float-right" title="eztfem installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="example_stokes2.html" class="btn btn-neutral float-left" title="Stokes problem with Neumann BCs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plotting.html" class="btn btn-neutral float-right" title="plotting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
