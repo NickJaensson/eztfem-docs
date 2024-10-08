@@ -66,7 +66,7 @@
 <li class="toctree-l1"><a class="reference internal" href="example_stokes2.html">Stokes problem with Neumann BCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_streamfunction.html">computing the streamfunction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">eztfem package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">eztfem API documentation</a></li>
 </ul>
 
         </div>
@@ -95,7 +95,17 @@
              
   <section id="poisson-problem-with-dirichlet-bcs">
 <h1>Poisson problem with Dirichlet BCs<a class="headerlink" href="#poisson-problem-with-dirichlet-bcs" title="Link to this heading"></a></h1>
-<p>This page gives a breakdown of the <code class="docutils literal notranslate"><span class="pre">poisson1.py</span></code> example.</p>
+<p>This page gives a breakdown of the <code class="docutils literal notranslate"><span class="pre">poisson1.py</span></code>, which considers a
+Poisson problem:</p>
+<div class="math notranslate nohighlight">
+\[-\nabla^2 u = f\]</div>
+<p>on a unit square <span class="math notranslate nohighlight">\((x,y)\in(0,1)\times(0,1)\)</span>.</p>
+<p>Substituting the following solution for <span class="math notranslate nohighlight">\(u\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[u = 1 + \cos(\pi x)\cos(\pi y)\]</div>
+<p>gives the corresponding <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f = 2\pi^2 \cos(\pi x)\cos(\pi y)\]</div>
 <section id="importing-packages">
 <h2>Importing packages<a class="headerlink" href="#importing-packages" title="Link to this heading"></a></h2>
 <p>Import the relevant packages to run this script.</p>

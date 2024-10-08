@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eztfem package &mdash; eztfem.py Oct 2024 documentation</title>
+  <title>eztfem API documentation &mdash; eztfem.py Oct 2024 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="eztfem.html" />
+    <link rel="next" title="eztfem package" href="eztfem.html" />
     <link rel="prev" title="plotting" href="plotting.html" /> 
 </head>
 
@@ -55,9 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="example_stokes2.html">Stokes problem with Neumann BCs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example_streamfunction.html">computing the streamfunction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">plotting</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">eztfem package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.html">addons subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html">core subpackage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">eztfem API documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eztfem.html">eztfem package</a></li>
 </ul>
 </li>
 </ul>
@@ -76,7 +75,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">eztfem package</li>
+      <li class="breadcrumb-item active">eztfem API documentation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,112 +85,115 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="eztfem-package">
-<h1>eztfem package<a class="headerlink" href="#eztfem-package" title="Link to this heading"></a></h1>
+  <section id="eztfem-api-documentation">
+<h1>eztfem API documentation<a class="headerlink" href="#eztfem-api-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="eztfem.addons.html">addons subpackage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.elements.html">elements subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.elements.html#module-eztfem.addons.elements.poisson_elements">poisson_elements module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.poisson_elements.poisson_deriv"><code class="docutils literal notranslate"><span class="pre">poisson_deriv()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.poisson_elements.poisson_elem"><code class="docutils literal notranslate"><span class="pre">poisson_elem()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.poisson_elements.poisson_natboun_curve"><code class="docutils literal notranslate"><span class="pre">poisson_natboun_curve()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="eztfem.html">eztfem package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.html">addons subpackage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.elements.html">elements subpackage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#module-eztfem.addons.elements.poisson_elements">poisson_elements module</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.poisson_elements.poisson_deriv"><code class="docutils literal notranslate"><span class="pre">poisson_deriv()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.poisson_elements.poisson_elem"><code class="docutils literal notranslate"><span class="pre">poisson_elem()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.poisson_elements.poisson_natboun_curve"><code class="docutils literal notranslate"><span class="pre">poisson_natboun_curve()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.elements.html#module-eztfem.addons.elements.stokes_elements">stokes_elements module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_deriv"><code class="docutils literal notranslate"><span class="pre">stokes_deriv()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_elem"><code class="docutils literal notranslate"><span class="pre">stokes_elem()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_flowrate_curve"><code class="docutils literal notranslate"><span class="pre">stokes_flowrate_curve()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_natboun_curve"><code class="docutils literal notranslate"><span class="pre">stokes_natboun_curve()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_pressure"><code class="docutils literal notranslate"><span class="pre">stokes_pressure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#module-eztfem.addons.elements.stokes_elements">stokes_elements module</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_deriv"><code class="docutils literal notranslate"><span class="pre">stokes_deriv()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_elem"><code class="docutils literal notranslate"><span class="pre">stokes_elem()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_flowrate_curve"><code class="docutils literal notranslate"><span class="pre">stokes_flowrate_curve()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_natboun_curve"><code class="docutils literal notranslate"><span class="pre">stokes_natboun_curve()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.stokes_elements.stokes_pressure"><code class="docutils literal notranslate"><span class="pre">stokes_pressure()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.elements.html#module-eztfem.addons.elements.streamfunction_elements">streamfunction_elements module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.streamfunction_elements.streamfunction_elem"><code class="docutils literal notranslate"><span class="pre">streamfunction_elem()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.streamfunction_elements.streamfunction_natboun_curve"><code class="docutils literal notranslate"><span class="pre">streamfunction_natboun_curve()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.meshes.html">meshes subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.meshes.html#module-eztfem.addons.meshes.compound_meshgen">compound_meshgen module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.compound_meshgen.l_shape2d"><code class="docutils literal notranslate"><span class="pre">l_shape2d()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.compound_meshgen.two_blocks2d"><code class="docutils literal notranslate"><span class="pre">two_blocks2d()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.meshes.html#module-eztfem.addons.meshes.pyvista_meshgen">pyvista_meshgen module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.pyvista_meshgen.find_elshape_vtk"><code class="docutils literal notranslate"><span class="pre">find_elshape_vtk()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.pyvista_meshgen.generate_pyvista_mesh"><code class="docutils literal notranslate"><span class="pre">generate_pyvista_mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.elements.html#module-eztfem.addons.elements.streamfunction_elements">streamfunction_elements module</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.streamfunction_elements.streamfunction_elem"><code class="docutils literal notranslate"><span class="pre">streamfunction_elem()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.elements.html#eztfem.addons.elements.streamfunction_elements.streamfunction_natboun_curve"><code class="docutils literal notranslate"><span class="pre">streamfunction_natboun_curve()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.addons.plotlib.html">plotlib subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.plotlib.html#module-eztfem.addons.plotlib.plotting_functions">plotting_functions module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_curves"><code class="docutils literal notranslate"><span class="pre">plot_curves()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_mesh"><code class="docutils literal notranslate"><span class="pre">plot_mesh()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_mesh_pv"><code class="docutils literal notranslate"><span class="pre">plot_mesh_pv()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_over_line"><code class="docutils literal notranslate"><span class="pre">plot_over_line()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_quiver"><code class="docutils literal notranslate"><span class="pre">plot_quiver()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_sol"><code class="docutils literal notranslate"><span class="pre">plot_sol()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.meshes.html">meshes subpackage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.meshes.html#module-eztfem.addons.meshes.compound_meshgen">compound_meshgen module</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.compound_meshgen.l_shape2d"><code class="docutils literal notranslate"><span class="pre">l_shape2d()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.compound_meshgen.two_blocks2d"><code class="docutils literal notranslate"><span class="pre">two_blocks2d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.meshes.html#module-eztfem.addons.meshes.pyvista_meshgen">pyvista_meshgen module</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.pyvista_meshgen.find_elshape_vtk"><code class="docutils literal notranslate"><span class="pre">find_elshape_vtk()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.meshes.html#eztfem.addons.meshes.pyvista_meshgen.generate_pyvista_mesh"><code class="docutils literal notranslate"><span class="pre">generate_pyvista_mesh()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.addons.plotlib.html">plotlib subpackage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.addons.plotlib.html#module-eztfem.addons.plotlib.plotting_functions">plotting_functions module</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_curves"><code class="docutils literal notranslate"><span class="pre">plot_curves()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_mesh"><code class="docutils literal notranslate"><span class="pre">plot_mesh()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_mesh_pv"><code class="docutils literal notranslate"><span class="pre">plot_mesh_pv()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_over_line"><code class="docutils literal notranslate"><span class="pre">plot_over_line()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_quiver"><code class="docutils literal notranslate"><span class="pre">plot_quiver()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="eztfem.addons.plotlib.html#eztfem.addons.plotlib.plotting_functions.plot_sol"><code class="docutils literal notranslate"><span class="pre">plot_sol()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eztfem.core.html">core subpackage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.shapefunc">shapefunc module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.barycentric"><code class="docutils literal notranslate"><span class="pre">barycentric()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.basis_function"><code class="docutils literal notranslate"><span class="pre">basis_function()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.isoparametric_deformation"><code class="docutils literal notranslate"><span class="pre">isoparametric_deformation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.isoparametric_deformation_curve"><code class="docutils literal notranslate"><span class="pre">isoparametric_deformation_curve()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.refcoor_nodal_points"><code class="docutils literal notranslate"><span class="pre">refcoor_nodal_points()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html">core subpackage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.shapefunc">shapefunc module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.barycentric"><code class="docutils literal notranslate"><span class="pre">barycentric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.basis_function"><code class="docutils literal notranslate"><span class="pre">basis_function()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.isoparametric_deformation"><code class="docutils literal notranslate"><span class="pre">isoparametric_deformation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.isoparametric_deformation_curve"><code class="docutils literal notranslate"><span class="pre">isoparametric_deformation_curve()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.shapefunc.refcoor_nodal_points"><code class="docutils literal notranslate"><span class="pre">refcoor_nodal_points()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.system_matrix">system_matrix module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.system_matrix.add_boundary_elements"><code class="docutils literal notranslate"><span class="pre">add_boundary_elements()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.system_matrix.apply_essential"><code class="docutils literal notranslate"><span class="pre">apply_essential()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.system_matrix.build_system"><code class="docutils literal notranslate"><span class="pre">build_system()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.system_matrix">system_matrix module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.system_matrix.add_boundary_elements"><code class="docutils literal notranslate"><span class="pre">add_boundary_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.system_matrix.apply_essential"><code class="docutils literal notranslate"><span class="pre">apply_essential()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.system_matrix.build_system"><code class="docutils literal notranslate"><span class="pre">build_system()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.problem">problem module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.problem.Problem"><code class="docutils literal notranslate"><span class="pre">Problem</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.problem.define_essential"><code class="docutils literal notranslate"><span class="pre">define_essential()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.problem">problem module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.problem.Problem"><code class="docutils literal notranslate"><span class="pre">Problem</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.problem.define_essential"><code class="docutils literal notranslate"><span class="pre">define_essential()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.user">user module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.user.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.user">user module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.user.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.vector">vector module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.vector.Vector"><code class="docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.vector.deriv_vector"><code class="docutils literal notranslate"><span class="pre">deriv_vector()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.vector.fill_system_vector"><code class="docutils literal notranslate"><span class="pre">fill_system_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.vector">vector module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.vector.Vector"><code class="docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.vector.deriv_vector"><code class="docutils literal notranslate"><span class="pre">deriv_vector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.vector.fill_system_vector"><code class="docutils literal notranslate"><span class="pre">fill_system_vector()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.gauss">gauss module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.gauss.gauss_legendre"><code class="docutils literal notranslate"><span class="pre">gauss_legendre()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.gauss">gauss module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.gauss.gauss_legendre"><code class="docutils literal notranslate"><span class="pre">gauss_legendre()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.postprocessing">postprocessing module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.postprocessing.integrate_boundary_elements"><code class="docutils literal notranslate"><span class="pre">integrate_boundary_elements()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.postprocessing">postprocessing module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.postprocessing.integrate_boundary_elements"><code class="docutils literal notranslate"><span class="pre">integrate_boundary_elements()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.meshgen_extra">meshgen_extra module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen_extra.mesh_merge"><code class="docutils literal notranslate"><span class="pre">mesh_merge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.meshgen_extra">meshgen_extra module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen_extra.mesh_merge"><code class="docutils literal notranslate"><span class="pre">mesh_merge()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.pos_array">pos_array module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.pos_array.pos_array"><code class="docutils literal notranslate"><span class="pre">pos_array()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.pos_array.pos_array_vec"><code class="docutils literal notranslate"><span class="pre">pos_array_vec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.pos_array">pos_array module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.pos_array.pos_array"><code class="docutils literal notranslate"><span class="pre">pos_array()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.pos_array.pos_array_vec"><code class="docutils literal notranslate"><span class="pre">pos_array_vec()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.meshgen">meshgen module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.Mesh"><code class="docutils literal notranslate"><span class="pre">Mesh</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.distribute_elements"><code class="docutils literal notranslate"><span class="pre">distribute_elements()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.line1d"><code class="docutils literal notranslate"><span class="pre">line1d()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.quadrilateral2d"><code class="docutils literal notranslate"><span class="pre">quadrilateral2d()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="eztfem.core.html#module-eztfem.core.meshgen">meshgen module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.Mesh"><code class="docutils literal notranslate"><span class="pre">Mesh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.distribute_elements"><code class="docutils literal notranslate"><span class="pre">distribute_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.line1d"><code class="docutils literal notranslate"><span class="pre">line1d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eztfem.core.html#eztfem.core.meshgen.quadrilateral2d"><code class="docutils literal notranslate"><span class="pre">quadrilateral2d()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -205,7 +207,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="plotting.html" class="btn btn-neutral float-left" title="plotting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="eztfem.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="eztfem.html" class="btn btn-neutral float-right" title="eztfem package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
