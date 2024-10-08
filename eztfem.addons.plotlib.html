@@ -154,15 +154,39 @@ Optional arguments:
 
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.addons.plotlib.plotting_functions.plot_over_line">
-<span class="sig-name descname"><span class="pre">plot_over_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_pv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.plotlib.plotting_functions.plot_over_line" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">plot_over_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_pv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degfd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.plotlib.plotting_functions.plot_over_line" title="Link to this definition"></a></dt>
+<dd><p>Plots and samples data along a line through a mesh, optionally visualizing
+the mesh and the line.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>mesh_pv<span class="classifier">object</span></dt><dd><p>A PyVista mesh object containing the data to be sampled and visualized.</p>
+</dd>
+<dt>points<span class="classifier">list or array_like</span></dt><dd><p>A list of two 3D points, each of shape (3,), defining the start and end
+points of the line over which to sample.</p>
+</dd>
+<dt>npoints<span class="classifier">int, optional</span></dt><dd><p>The number of points to sample along the line. Default is 200.</p>
+</dd>
+<dt>plot_mesh<span class="classifier">bool, optional</span></dt><dd><p>If True, the function plots the mesh along with the line for
+visualization. The default is False.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>sampled_data<span class="classifier">object</span></dt><dd><p>A PyVista dataset containing the sampled data along the line.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="eztfem.addons.plotlib.plotting_functions.plot_quiver">
 <span class="sig-name descname"><span class="pre">plot_quiver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_pv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.plotlib.plotting_functions.plot_quiver" title="Link to this definition"></a></dt>
 <dd><p>Plots the solution of a given problem on a mesh using PyVista.</p>
-<section id="id1">
-<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="id2">
+<h3>Parameters<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>mesh_pv<span class="classifier">pyvista.PolyData</span></dt><dd><p>The mesh on which to plot the solution.</p>
 </dd>
@@ -172,8 +196,8 @@ Optional arguments:
 </dd>
 </dl>
 </section>
-<section id="id2">
-<h3>Keyword arguments<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<section id="id3">
+<h3>Keyword arguments<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>kwargs<span class="classifier">dict, optional</span></dt><dd><p>Additional keyword arguments to pass to the plotter.add_mesh function.</p>
 </dd>
@@ -185,8 +209,8 @@ Optional arguments:
 <dt class="sig sig-object py" id="eztfem.addons.plotlib.plotting_functions.plot_sol">
 <span class="sig-name descname"><span class="pre">plot_sol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_pv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eztfem.addons.plotlib.plotting_functions.plot_sol" title="Link to this definition"></a></dt>
 <dd><p>Plots the solution of a given problem on a mesh using PyVista.</p>
-<section id="id3">
-<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>mesh_pv<span class="classifier">pyvista.PolyData</span></dt><dd><p>The mesh on which to plot the solution.</p>
 </dd>
@@ -196,8 +220,8 @@ Optional arguments:
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h3>Keyword arguments<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id5">
+<h3>Keyword arguments<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>kwargs<span class="classifier">dict, optional</span></dt><dd><p>Additional keyword arguments to pass to the plotter.add_mesh function.</p>
 </dd>
