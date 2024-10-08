@@ -1,6 +1,8 @@
 Poisson problem with Dirichlet BCs
 ==================================
 
+This page gives a breakdown of the ``poisson1.py`` example.
+
 Importing packages
 ------------------
 Import the relevant packages to run this script.
